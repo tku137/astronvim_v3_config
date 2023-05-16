@@ -15,11 +15,18 @@ return {
       end,
       desc = "Pick to close",
     },
+    -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
+    -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
+    ["<leader>bl"] = { "<cmd>bprevious<cr>", desc = "Left buffer"},
+    ["<leader>br"] = { "<cmd>bnext<cr>", desc = "Right buffer"},
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>ll"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
+    -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
+    -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
   },
   t = {
     -- setting a mapping to false will disable it
