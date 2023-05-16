@@ -24,7 +24,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>ll"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
+    -- ["<leader>ll"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
     -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
   },
