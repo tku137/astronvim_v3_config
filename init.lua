@@ -18,6 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
+  -- catppuccin, catppuccin-macchiato, nightfox, duskfox, everforest
   -- colorscheme = "astrodark",
   colorscheme = "catppuccin",
 
