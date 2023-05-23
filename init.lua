@@ -18,9 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  -- catppuccin, catppuccin-macchiato, nightfox, duskfox, everforest
-  -- colorscheme = "astrodark",
-  colorscheme = "catppuccin",
+  colorscheme = "astrodark",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
