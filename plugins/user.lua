@@ -16,4 +16,8 @@ return {
       -- require("leap").add_default_mappings()
     -- end,
   -- },
+  -- {
+    -- "github/copilot.vim",
+    -- event = "BufRead",
+  -- },
 }
