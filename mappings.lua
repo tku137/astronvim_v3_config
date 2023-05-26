@@ -16,8 +16,7 @@ return {
       desc = "Pick to close",
     },
     -- better buffer navigation
-    ["<leader>bl"] = { "<cmd>bprevious<cr>", desc = "Left buffer"},
-    ["<leader>br"] = { "<cmd>bnext<cr>", desc = "Right buffer"},
+    -- sets shift+l/h to switch buffers with option of a count before the command
     ["<S-l>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
@@ -29,12 +28,12 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    -- put aerial shortcuts under the 'find' menu
-    -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
-    -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
-   -- quick save
+    -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- some plugin mappings
+    -- if lsp_lines is installed, this toggles it on or off
     -- ["<leader>ll"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
+    -- put aerial shortcuts under the 'find' menu
     -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
   },
