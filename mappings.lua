@@ -29,6 +29,13 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    
+    -- Tab Mappings
+    ["<leader>Tn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>Tc"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
+    -- a table with the `name` key will register with which-key if it's available
+    -- this an easy way to add menu titles in which-key
+    ["<leader>T"] = { name = "Tabs" },
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
