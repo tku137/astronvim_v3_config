@@ -29,21 +29,23 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    
+
     -- Tab Mappings
     ["<leader>Tn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>Tc"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
+    ["<leader>Th"] = { "<cmd>tabprevious<cr>", desc = "Left tab" },
+    ["<leader>Tl"] = { "<cmd>tabnext<cr>", desc = "Right tab" },
     -- a table with the `name` key will register with which-key if it's available
     -- this an easy way to add menu titles in which-key
     ["<leader>T"] = { name = "Tabs" },
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    
+
     -- some plugin mappings
     -- if lsp_lines is installed, this toggles it on or off
     -- ["<leader>ll"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
-    
+
     -- put aerial shortcuts under the 'find' menu
     -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
