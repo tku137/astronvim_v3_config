@@ -28,11 +28,12 @@ return {
   -- { import = "astrocommunity.motion.mini-surround" },
   -- { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.harpoon" },
-  
+
   -- packs
-  -- { import = "astrocommunity.pack.python" },
-  -- { import = "astrocommunity.pack.markdown" },
-  -- { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.bash" },
 
   -- others
   -- helping you establish good command workflow and habit
