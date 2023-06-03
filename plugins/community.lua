@@ -6,6 +6,7 @@ return {
 
   -- color schemes
   { import = "astrocommunity.colorscheme.catppuccin" },
+  -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   -- { import = "astrocommunity.colorscheme.nightfox" },
   -- { import = "astrocommunity.colorscheme.everforest" },
 

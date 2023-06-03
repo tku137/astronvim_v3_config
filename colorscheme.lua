@@ -1,2 +1,2 @@
--- catppuccin, catppuccin-macchiato, nightfox, duskfox, everforest 
+-- onedark, catppuccin, catppuccin-macchiato, nightfox, duskfox, everforest 
 return "catppuccin"
