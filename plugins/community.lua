@@ -6,6 +6,21 @@ return {
 
   -- color schemes
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { -- further customize the options set by the community
+    "catppuccin",
+    opts = {
+      integrations = {
+        mini = true,
+        leap = true,
+        markdown = true,
+        neotest = true,
+        cmp = true,
+        lsp_trouble = true,
+        ts_rainbow2 = true,
+        harpoon = true
+      },
+    },
+  },
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   -- { import = "astrocommunity.colorscheme.nightfox" },
   -- { import = "astrocommunity.colorscheme.everforest" },
