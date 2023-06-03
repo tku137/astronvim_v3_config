@@ -37,7 +37,7 @@ return {
     ["<leader>Tl"] = { "<cmd>tabnext<cr>", desc = "Right tab" },
     -- a table with the `name` key will register with which-key if it's available
     -- this an easy way to add menu titles in which-key
-    ["<leader>T"] = { name = "Tabs" },
+    ["<leader>T"] = { name = "󰓩 Tabs" },
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
