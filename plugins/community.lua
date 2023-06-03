@@ -17,7 +17,10 @@ return {
         cmp = true,
         lsp_trouble = true,
         ts_rainbow2 = true,
-        harpoon = true
+        harpoon = true,
+        gitsigns = true,
+        treesitter = true,
+        symbols_outline = true,
       },
     },
   },
@@ -33,6 +36,16 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+  { -- further customize the options set by the community
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      rainbow = {
+        -- list of languages you want to disable the plugin for
+        disable = { 'jsx', 'cpp' },
+      }
+    }
+  },
+
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.glow-nvim" },
