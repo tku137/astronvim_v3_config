@@ -25,7 +25,7 @@ return {
     },
   },
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
-  -- { import = "astrocommunity.colorscheme.nightfox" },
+  -- { import = "astrocommunity.colorscheme.nightfox-nvim" },
   -- { import = "astrocommunity.colorscheme.everforest" },
 
   -- code completion
