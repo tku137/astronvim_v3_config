@@ -60,7 +60,7 @@ return {
   { import = "astrocommunity.motion.harpoon" },
 
   -- packs
-  { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.bash" },
