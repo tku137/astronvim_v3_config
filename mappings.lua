@@ -63,6 +63,7 @@ return {
       end,
       desc = "Toggle tint"
     },
+    ["<leader>uZ"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
   },
   t = {
     -- setting a mapping to false will disable it

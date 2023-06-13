@@ -40,6 +40,8 @@ return {
 
   -- visuals
   { import = "astrocommunity.color.tint-nvim" },
+  { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  { import = "astrocommunity.color.twilight-nvim" },
 
   -- code completion
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
