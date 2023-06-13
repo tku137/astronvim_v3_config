@@ -38,6 +38,9 @@ return {
   -- { import = "astrocommunity.colorscheme.nightfox-nvim" },
   -- { import = "astrocommunity.colorscheme.everforest" },
 
+  -- visuals
+  { import = "astrocommunity.color.tint-nvim" },
+
   -- code completion
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.codeium-vim" },

@@ -55,6 +55,14 @@ return {
     ["<leader>xT"] = { "<cmd>TodoTrouble<cr>", desc = "Open Todos in Trouble" },
     ["<leader>xQ"] = { "<cmd>TodoQuickFix<cr>", desc = "Quickfix List (Todo)" },
     ["<leader>xL"] = { "<cmd>TodoLocList<cr>", desc = "Location List (Todo)" },
+
+    -- visuals
+    ["<leader>uT"] = {
+      function ()
+        require("tint").toggle()
+      end,
+      desc = "Toggle tint"
+    },
   },
   t = {
     -- setting a mapping to false will disable it
