@@ -113,4 +113,8 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  v = {
+    ["<leader>r"] = { "<Plug>Send", desc = "Send to REPL" },
+    -- ["<leader>s"] = { function() require("spectre").open_visual() end, desc = "Spectre" },
+  },
 }
