@@ -83,4 +83,6 @@ return {
   -- others
   -- helping you establish good command workflow and habit
   -- { import = "astrocommunity.workflow.hardtime-nvim" },
+  -- project picker with telescope support
+  { import = "astrocommunity.project.project-nvim" },
 }

@@ -50,6 +50,9 @@ return {
     -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
 
+    -- put projects shortcut under the 'find' menu
+    ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
+
     -- put todo-comments under trouble group
     ["<leader>xt"] = { "<cmd>TodoTelescope<cr>", desc = "Open Todos in Telescope" },
     ["<leader>xT"] = { "<cmd>TodoTrouble<cr>", desc = "Open Todos in Trouble" },
