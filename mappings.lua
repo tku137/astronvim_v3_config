@@ -3,6 +3,9 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+
+local astro_utils = require "astronvim.utils"
+
 return {
   -- first key is the mode
   n = {
@@ -38,6 +41,43 @@ return {
     -- a table with the `name` key will register with which-key if it's available
     -- this an easy way to add menu titles in which-key
     ["<leader>T"] = { name = "󰓩 Tabs" },
+
+    -- Codeium
+    ["<leader>;"] = { desc = "󰧑 AI Assistant" },
+    ["<leader>;;"] = {
+      function()
+        vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
+        astro_utils.notify("Codeium " .. (vim.g.codeium_enabled == 0 and "Disabled" or "Enabled"))
+      end,
+      desc = "Toggle Global",
+    },
+    ["<leader>;b"] = {
+      function()
+        vim.cmd.Codeium(vim.b.codeium_enabled == 0 and "EnableBuffer" or "DisableBuffer")
+        astro_utils.notify("Codeium (buffer) " .. (vim.b.codeium_enabled == 0 and "Disabled" or "Enabled"))
+      end,
+      desc = "Toggle Buffer",
+    },
+    ["<leader>;a"] = {
+      function() return vim.fn["codeium#Accept"]() end,
+      desc = "Insert Suggestion",
+    },
+    ["<leader>;k"] = {
+      function() return vim.fn["codeium#CycleCompletions"](1) end,
+      desc = "Next Suggestion",
+    },
+    ["<leader>;j"] = {
+      function() return vim.fn["codeium#CycleCompletions"](-1) end,
+      desc = "Previous Suggestion",
+    },
+    ["<leader>;x"] = {
+      function() return vim.fn["codeium#Clear"]() end,
+      desc = "Clear Current Suggestion",
+    },
+    ["<leader>;m"] = {
+      function() return vim.fn["codeium#Complete"]() end,
+      desc = "Manually Trigger Suggestion",
+    },
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
