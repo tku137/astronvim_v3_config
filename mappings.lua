@@ -14,7 +14,9 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
@@ -94,6 +96,7 @@ return {
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
 
     -- put todo-comments under trouble group
+    ["<leader>x"] = { desc = "󰒡 Trouble" },
     ["<leader>xt"] = { "<cmd>TodoTelescope<cr>", desc = "Open Todos in Telescope" },
     ["<leader>xT"] = { "<cmd>TodoTrouble<cr>", desc = "Open Todos in Trouble" },
     ["<leader>xQ"] = { "<cmd>TodoQuickFix<cr>", desc = "Quickfix List (Todo)" },
@@ -101,10 +104,8 @@ return {
 
     -- visuals
     ["<leader>uT"] = {
-      function ()
-        require("tint").toggle()
-      end,
-      desc = "Toggle tint"
+      function() require("tint").toggle() end,
+      desc = "Toggle tint",
     },
     ["<leader>uZ"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
   },

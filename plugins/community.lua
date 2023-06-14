@@ -6,7 +6,8 @@ return {
 
   -- color schemes
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { -- further customize the options set by the community
+  {
+    -- further customize the options set by the community
     "catppuccin",
     opts = {
       integrations = {
@@ -51,14 +52,15 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
-  { -- further customize the options set by the community
+  {
+    -- further customize the options set by the community
     "nvim-treesitter/nvim-treesitter",
     opts = {
       rainbow = {
         -- list of languages you want to disable the plugin for
-        disable = { 'jsx', 'cpp' },
-      }
-    }
+        disable = { "jsx", "cpp" },
+      },
+    },
   },
 
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
