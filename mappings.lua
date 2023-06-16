@@ -123,4 +123,22 @@ return {
     ["<leader>r"] = { "<Plug>Send", desc = "Send to REPL" },
     -- ["<leader>s"] = { function() require("spectre").open_visual() end, desc = "Spectre" },
   },
+  i = {
+    ["<C-;>"] = {
+      function() return vim.fn["codeium#Accept"]() end,
+      desc = "Insert Suggestion",
+    },
+    ["<C-->"] = {
+      function() return vim.fn["codeium#CycleCompletions"](1) end,
+      desc = "Next Suggestion",
+    },
+    ["<C-=>"] = {
+      function() return vim.fn["codeium#CycleCompletions"](-1) end,
+      desc = "Previous Suggestion",
+    },
+    ["<C-BS>"] = {
+      function() return vim.fn["codeium#Clear"]() end,
+      desc = "Clear Current Suggestion",
+    },
+  },
 }
