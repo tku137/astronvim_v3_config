@@ -102,6 +102,12 @@ return {
     ["<leader>xQ"] = { "<cmd>TodoQuickFix<cr>", desc = "Quickfix List (Todo)" },
     ["<leader>xL"] = { "<cmd>TodoLocList<cr>", desc = "Location List (Todo)" },
 
+    -- REPL via send-to-term
+    ["<leader>r"] = { desc = " REPL" },
+    ["<leader>rr"] = { "<Plug>Send", desc = "Send to REPL" },
+    ["<leader>rl"] = { "<Plug>SendLine", desc = "Send line to REPL" },
+    ["<leader>r<cr>"] = { "<cmd>SendHere<cr>", desc = "Set REPL" },
+
     -- visuals
     ["<leader>uT"] = {
       function() require("tint").toggle() end,
