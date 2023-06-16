@@ -10,6 +10,8 @@ return {
     -- further customize the options set by the community
     "catppuccin",
     opts = {
+      flavour = "macchiato", -- latte, frappe, macchiato, mocha
+      term_colors = true,
       dim_inactive = { enabled = true, percentage = 0.25 },
       integrations = {
         nvimtree = false,
