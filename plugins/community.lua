@@ -62,6 +62,7 @@ return {
       },
     },
   },
+  { import = "astrocommunity.editing-support.neogen" },
 
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
