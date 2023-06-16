@@ -10,6 +10,7 @@ return {
     -- further customize the options set by the community
     "catppuccin",
     opts = {
+      dim_inactive = { enabled = true, percentage = 0.25 },
       integrations = {
         nvimtree = false,
         ts_rainbow = false,
@@ -40,9 +41,9 @@ return {
   -- { import = "astrocommunity.colorscheme.everforest" },
 
   -- visuals
-  { import = "astrocommunity.color.tint-nvim" },
-  { import = "astrocommunity.editing-support.zen-mode-nvim" },
-  { import = "astrocommunity.color.twilight-nvim" },
+  -- { import = "astrocommunity.color.tint-nvim" },
+  -- { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  -- { import = "astrocommunity.color.twilight-nvim" },
 
   -- code completion
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
