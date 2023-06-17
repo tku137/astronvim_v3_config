@@ -7,13 +7,21 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-        -- "lua_ls", -- lua
-        "ruff_lsp", "pyright", -- python
-        "clangd", -- cpp
-        -- "bashls", -- bash
-        -- "marksman", -- markdown
-        -- "jsonls", -- json
-        -- "yamlls", -- yaml
+        -- lua
+        "lua_ls",
+        -- python
+        "ruff_lsp",
+        "pyright",
+        -- cpp
+        "clangd",
+        -- bash
+        "bashls",
+        -- markdown
+        "marksman",
+        -- json
+        -- "jsonls",
+        -- yaml
+        -- "yamlls",
       })
     end,
   },
@@ -24,15 +32,25 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-        -- "stylua", -- lua
-        -- "ruff", "black", -- python
-        "black", -- python
-        "cpplint", "clang-format", -- cpp
-        -- "shellcheck", "beautysh", -- bash
-        -- "markdownlint", -- markdown
-        -- "jsonlint", -- json
-        -- "yamllint", -- yaml
-        -- "prettier", -- markdown, json, yaml
+        -- lua
+        "stylua",
+        "luacheck",
+        --python
+        -- "ruff",
+        "black",
+        -- cpp
+        "cpplint",
+        "clang-format",
+        -- bash
+        "shellcheck",
+        "shfmt",
+        -- markdown
+        -- "markdownlint",
+        -- json
+        -- "jsonlint",
+        -- yaml
+        -- "yamllint",
+        "prettierd", -- markdown, json, yaml
       })
     end,
   },
@@ -42,8 +60,12 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-        "python", -- python
-        "cppdbg", -- cpp
+        -- python
+        "python",
+        -- cpp
+        "cppdbg",
+        -- bash
+        -- "bash",
       })
     end,
   },
