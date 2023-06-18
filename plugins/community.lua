@@ -70,7 +70,6 @@ return {
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.glow-nvim" },
-  -- { import = "astrocommunity.note-taking.obsidian-nvim" },
   -- { import = "astrocommunity.editing-support.refactoring-nvim"}
 
   -- motion
@@ -86,6 +85,9 @@ return {
   -- { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.pack.bash" },
+
+  -- note taking
+  -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 
   -- others
   -- helping you establish good command workflow and habit
