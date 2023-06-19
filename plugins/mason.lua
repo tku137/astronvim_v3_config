@@ -50,7 +50,8 @@ return {
         -- "jsonlint",
         -- yaml
         -- "yamllint",
-        "prettierd", -- markdown, json, yaml
+        -- markdown, json, yaml
+        "prettierd",
       })
     end,
   },

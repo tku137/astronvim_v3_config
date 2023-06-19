@@ -5,20 +5,16 @@ return {
   -- {
   --   "ray-x/lsp_signature.nvim",
   --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
+  --   config = function() require("lsp_signature").setup() end,
   -- },
   -- {
-    -- "ggandor/leap.nvim",
-    -- event = "BufRead",
-    -- config = function()
-      -- require("leap").add_default_mappings()
-    -- end,
+  --   "ggandor/leap.nvim",
+  --   event = "BufRead",
+  --   config = function() require("leap").add_default_mappings() end,
   -- },
   -- {
-    -- "github/copilot.vim",
-    -- event = "BufRead",
+  --   "github/copilot.vim",
+  --   event = "BufRead",
   -- },
   {
     "linux-cultist/venv-selector.nvim",
