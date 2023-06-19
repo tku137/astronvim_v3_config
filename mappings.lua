@@ -84,6 +84,11 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
+    -- Copy/paste with system clipboard
+    ["gy"] = { '"+y', desc = "Copy to system clipboard" },
+    ["gp"] = { '"+p', desc = "Paste from system clipboard" },
+    ["gP"] = { '"+P', desc = "Paste from system clipboard" },
+
     -- some plugin mappings
     -- if lsp_lines is installed, this toggles it on or off
     -- ["<leader>ll"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
@@ -92,8 +97,9 @@ return {
     -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
 
-    -- put projects shortcut under the 'find' menu
+    -- put some plugin shortcuts under the 'find' menu
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
+    ["<leader>fY"] = { "<cmd>Telescope neoclip<cr>", desc = "Find yanks" },
 
     -- put todo-comments under trouble group
     ["<leader>x"] = { desc = "󰒡 Trouble" },
