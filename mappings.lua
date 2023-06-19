@@ -86,8 +86,10 @@ return {
 
     -- Copy/paste with system clipboard
     ["gy"] = { '"+y', desc = "Copy to system clipboard" },
+    ["gY"] = { '"+y$', desc = "Yank to system clipboard" },
     ["gp"] = { '"+p', desc = "Paste from system clipboard" },
     ["gP"] = { '"+P', desc = "Paste from system clipboard" },
+    ["gD"] = { '"_d', desc = "Delete to void" },
 
     -- Move with alt in insert, terminal and command
     -- Don't `noremap` in insert mode to have these keybindings behave exactly
@@ -140,9 +142,11 @@ return {
     -- make effect immediately.
     ["g/"] = { "<esc>/\\%V", silent = false, desc = "Search inside visual selection" },
     ["gV"] = { '"`[" . strpart(getregtype(), 0, 1) . "`]"', expr = true, desc = "Visually select changed text" },
-    ["gy"] = { '"+y', desc = "Copy to system clipboard" },
+    ["gy"] = { '"+y', desc = "yank to system clipboard" },
+    ["gY"] = { '"+y$', desc = "Yank to system clipboard" },
     ["gp"] = { '"+p', desc = "Paste from system clipboard" },
     ["gP"] = { '"+P', desc = "Paste from system clipboard" },
+    ["gD"] = { '"_d', desc = "Delete to void" },
     -- Search visually selected text (slightly better than builtins in Neovim>=0.8)
     ["*"] = { [[y/\V<C-R>=escape(@", '/\')<CR><CR>]] },
     ["#"] = { [[y?\V<C-R>=escape(@", '?\')<CR><CR>]] },
