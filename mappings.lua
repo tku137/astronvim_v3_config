@@ -125,6 +125,10 @@ return {
     ["<leader>r<cr>"] = { "<cmd>SendHere<cr>", desc = "Set REPL" },
     ["<leader>r"] = { desc = " REPL" },
 
+    -- fix missing descriptions in which-key
+    ["<leader><leader>"] = { desc = "󱡅 Harpoon" },
+    ["<leader>a"] = { desc = " Annotation" },
+
     -- visuals
     -- ["<leader>uT"] = {
     --   function() require("tint").toggle() end,
@@ -132,9 +136,12 @@ return {
     -- },
     -- ["<leader>uZ"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
   },
+  -- terminal mappings
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+    ["<C-BS>"] = { "<C-\\><C-n>", desc = "Terminal normal mode" },
+    ["<esc><esc>"] = { "<C-\\><C-n>:q<cr>", desc = "Terminal quit" },
   },
   v = {
     ["<leader>r"] = { "<Plug>Send", desc = "Send to REPL" },

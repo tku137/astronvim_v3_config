@@ -5,36 +5,38 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- color schemes
-  { import = "astrocommunity.colorscheme.catppuccin" },
   {
-    -- further customize the options set by the community
-    "catppuccin",
-    opts = {
-      flavour = "macchiato", -- latte, frappe, macchiato, mocha
-      term_colors = true,
-      dim_inactive = { enabled = true, percentage = 0.25 },
-      integrations = {
-        nvimtree = false,
-        ts_rainbow = false,
-        aerial = true,
-        dap = { enabled = true, enable_ui = true },
-        mason = true,
-        neotree = true,
-        notify = true,
-        semantic_tokens = true,
-        symbols_outline = true,
-        telescope = true,
-        which_key = true,
-        mini = true,
-        leap = true,
-        markdown = true,
-        neotest = true,
-        cmp = true,
-        lsp_trouble = true,
-        ts_rainbow2 = true,
-        harpoon = true,
-        gitsigns = true,
-        treesitter = true,
+    { import = "astrocommunity.colorscheme.catppuccin" },
+    {
+      -- further customize the options set by the community
+      "catppuccin",
+      opts = {
+        flavour = "macchiato", -- latte, frappe, macchiato, mocha
+        term_colors = true,
+        dim_inactive = { enabled = true, percentage = 0.25 },
+        integrations = {
+          nvimtree = false,
+          ts_rainbow = false,
+          aerial = true,
+          dap = { enabled = true, enable_ui = true },
+          mason = true,
+          neotree = true,
+          notify = true,
+          semantic_tokens = true,
+          symbols_outline = true,
+          telescope = true,
+          which_key = true,
+          mini = true,
+          leap = true,
+          markdown = true,
+          neotest = true,
+          cmp = true,
+          lsp_trouble = true,
+          ts_rainbow2 = true,
+          harpoon = true,
+          gitsigns = true,
+          treesitter = true,
+        },
       },
     },
   },
@@ -53,19 +55,27 @@ return {
 
   -- editing support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   {
-    -- further customize the options set by the community
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      rainbow = {
-        -- list of languages you want to disable the plugin for
-        disable = { "jsx", "cpp" },
+    { import = "astrocommunity.diagnostics.trouble-nvim" },
+    { "trouble.nvim", keys = { { "<leader>x", false } } },
+  },
+  {
+    { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+    {
+      -- further customize the options set by the community
+      "nvim-treesitter/nvim-treesitter",
+      opts = {
+        rainbow = {
+          -- list of languages you want to disable the plugin for
+          disable = { "jsx", "cpp" },
+        },
       },
     },
   },
-  { import = "astrocommunity.editing-support.neogen" },
+  {
+    { import = "astrocommunity.editing-support.neogen" },
+    { "neogen", keys = { { "<leader>a", false } } },
+  },
 
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
@@ -78,7 +88,10 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   -- { import = "astrocommunity.motion.mini-surround" },
   -- { import = "astrocommunity.motion.mini-move" },
-  { import = "astrocommunity.motion.harpoon" },
+  {
+    { import = "astrocommunity.motion.harpoon" },
+    { "harpoon", keys = { { "<leader><leader>",  false } } },
+  },
 
   -- packs
   -- { import = "astrocommunity.pack.python" },
