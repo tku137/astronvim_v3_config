@@ -16,11 +16,11 @@ return {
   --   "github/copilot.vim",
   --   event = "BufRead",
   -- },
-  {
-    "linux-cultist/venv-selector.nvim",
-    opts = {},
-    keys = { { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" } },
-  },
+  -- {
+  --   "linux-cultist/venv-selector.nvim",
+  --   opts = {},
+  --   keys = { { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" } },
+  -- },
   -- {
   --   "jupyter-vim/jupyter-vim",
   --   ft = { "pyhon", "julia" },

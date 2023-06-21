@@ -87,7 +87,7 @@ return {
   -- { import = "astrocommunity.pack.bash" },
 
   -- note taking
-  { import = "astrocommunity.note-taking.neorg" },
+  -- { import = "astrocommunity.note-taking.neorg" },
   -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 
   -- others
