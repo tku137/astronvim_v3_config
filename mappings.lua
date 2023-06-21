@@ -151,23 +151,4 @@ return {
     ["*"] = { [[y/\V<C-R>=escape(@", '/\')<CR><CR>]] },
     ["#"] = { [[y?\V<C-R>=escape(@", '?\')<CR><CR>]] },
   },
-  i = {
-    -- codeium rebinding (zellij compatibility)
-    ["<C-;>"] = {
-      function() return vim.fn["codeium#Accept"]() end,
-      desc = "Insert Suggestion",
-    },
-    ["<C-->"] = {
-      function() return vim.fn["codeium#CycleCompletions"](1) end,
-      desc = "Next Suggestion",
-    },
-    ["<C-=>"] = {
-      function() return vim.fn["codeium#CycleCompletions"](-1) end,
-      desc = "Previous Suggestion",
-    },
-    ["<C-BS>"] = {
-      function() return vim.fn["codeium#Clear"]() end,
-      desc = "Clear Current Suggestion",
-    },
-  },
 }
