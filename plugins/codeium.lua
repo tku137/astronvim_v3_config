@@ -6,6 +6,9 @@ return {
     vim.g.codeium_enabled = 0
     vim.g.codeium_disable_bindings = 1
     vim.g.codeium_idle_delay = 1500
+    vim.b.codeium_enabled = 0
+    vim.b.codeium_disable_bindings = 1
+    vim.b.codeium_idle_delay = 1500
   end,
   config = function()
     vim.keymap.set("i", "<C-;>", function() return vim.fn["codeium#Accept"]() end, { expr = true, desc = "Insert Suggestion" })
