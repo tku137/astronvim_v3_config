@@ -10,6 +10,7 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
+
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
@@ -21,7 +22,6 @@ return {
       desc = "Pick to close",
     },
     -- better buffer navigation
-
     -- sets shift+l/h to switch buffers with option of a count before the command
     ["<S-l>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
@@ -45,7 +45,6 @@ return {
     ["<leader>T"] = { name = "󰓩 Tabs" },
 
     -- Codeium
-    ["<leader>;"] = { desc = "󰧑 AI Assistant" },
     ["<leader>;;"] = {
       function()
         vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
@@ -80,6 +79,8 @@ return {
       function() return vim.fn["codeium#Complete"]() end,
       desc = "Manually Trigger Suggestion",
     },
+    ["<leader>;"] = { desc = "󰧑 AI Assistant" },
+
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
@@ -112,24 +113,24 @@ return {
     ["<leader>fY"] = { "<cmd>Telescope neoclip<cr>", desc = "Find yanks" },
 
     -- put todo-comments under trouble group
-    ["<leader>x"] = { desc = "󰒡 Trouble" },
     ["<leader>xt"] = { "<cmd>TodoTelescope<cr>", desc = "Open Todos in Telescope" },
     ["<leader>xT"] = { "<cmd>TodoTrouble<cr>", desc = "Open Todos in Trouble" },
     ["<leader>xQ"] = { "<cmd>TodoQuickFix<cr>", desc = "Quickfix List (Todo)" },
     ["<leader>xL"] = { "<cmd>TodoLocList<cr>", desc = "Location List (Todo)" },
+    ["<leader>x"] = { desc = "󰒡 Trouble" },
 
     -- REPL via send-to-term
-    ["<leader>r"] = { desc = " REPL" },
     ["<leader>rr"] = { "<Plug>Send", desc = "Send to REPL" },
     ["<leader>rl"] = { "<Plug>SendLine", desc = "Send line to REPL" },
     ["<leader>r<cr>"] = { "<cmd>SendHere<cr>", desc = "Set REPL" },
+    ["<leader>r"] = { desc = " REPL" },
 
     -- visuals
-    ["<leader>uT"] = {
-      function() require("tint").toggle() end,
-      desc = "Toggle tint",
-    },
-    ["<leader>uZ"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
+    -- ["<leader>uT"] = {
+    --   function() require("tint").toggle() end,
+    --   desc = "Toggle tint",
+    -- },
+    -- ["<leader>uZ"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
   },
   t = {
     -- setting a mapping to false will disable it
