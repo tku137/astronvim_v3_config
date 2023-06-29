@@ -108,4 +108,5 @@ return {
   -- { import = "astrocommunity.workflow.hardtime-nvim" },
   -- project picker with telescope support
   { import = "astrocommunity.project.project-nvim" },
+  -- { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
 }
