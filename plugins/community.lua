@@ -80,6 +80,7 @@ return {
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.glow-nvim" },
+  { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   -- { import = "astrocommunity.editing-support.refactoring-nvim"}
 
   -- motion
