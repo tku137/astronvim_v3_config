@@ -1,0 +1,22 @@
+{
+  "YAML Snippet": {
+    "prefix": "ques",
+    "body": [
+      "- Question: ${1:QUESTION}",
+      "  Description: >",
+      "    ${2:DESCRIPTION}",
+      "  SQLQuery: |",
+      "    SELECT",
+      "      ${3:SELECT}",
+      "    FROM",
+      "      ${4:FROM}",
+      "    GROUP BY",
+      "      ${5:GROUPBY}",
+      "    ORDER BY",
+      "      ${6:ORDERBY}",
+      "    LIMIT ${7:LIMIT}"
+    ],
+    "description": "YAML Snippet for structured question"
+  }
+}
+
