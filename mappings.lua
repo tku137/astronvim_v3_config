@@ -44,6 +44,16 @@ return {
     -- this an easy way to add menu titles in which-key
     ["<leader>T"] = { name = "󰓩 Tabs" },
 
+    -- open dashboard when no more buffers open
+    ["<leader>c"] = {
+      function()
+        local bufs = vim.fn.getbufinfo { buflisted = true }
+        require("astronvim.utils.buffer").close(0)
+        if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
+      end,
+      desc = "Close buffer",
+    },
+
     -- Codeium
     ["<leader>;;"] = {
       function()
