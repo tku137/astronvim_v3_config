@@ -60,7 +60,7 @@ return {
     { "trouble.nvim", keys = { { "<leader>x", false } } },
   },
   {
-    { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+    { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
     {
       -- further customize the options set by the community
       "nvim-treesitter/nvim-treesitter",
