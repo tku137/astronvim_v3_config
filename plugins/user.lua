@@ -16,11 +16,29 @@ return {
   --   "github/copilot.vim",
   --   event = "BufRead",
   -- },
-  -- {
-  --   "linux-cultist/venv-selector.nvim",
-  --   opts = {},
-  --   keys = { { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" } },
-  -- },
+  {
+    "linux-cultist/venv-selector.nvim",
+    opts = {},
+    keys = { { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" } },
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    dependencies = { "mfussenegger/nvim-dap" },
+    -- NOTE: ft: lazy-load on filetype
+    ft = "python",
+    event = "User AstroFile",
+    config = function() require("dap-python").setup("python", {}) end,
+    -- config = function() require("dap-python").setup('~/.virtualenvs/debugpy/bin/python') end,
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+    dependencies = { "mfussenegger/nvim-dap" },
+    -- NOTE: ft: lazy-load on filetype
+    ft = "python",
+    event = "User AstroFile",
+    config = function() require("nvim-dap-virtual-text").setup() end,
+    -- config = function() require("dap-python").setup('~/.virtualenvs/debugpy/bin/python') end,
+  },
   -- {
   --   "jupyter-vim/jupyter-vim",
   --   ft = { "pyhon", "julia" },
