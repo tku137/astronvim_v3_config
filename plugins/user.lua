@@ -39,6 +39,22 @@ return {
     config = function() require("nvim-dap-virtual-text").setup() end,
     -- config = function() require("dap-python").setup('~/.virtualenvs/debugpy/bin/python') end,
   },
+  {
+    "LiadOz/nvim-dap-repl-highlights",
+    dependencies = { "mfussenegger/nvim-dap" },
+    -- NOTE: ft: lazy-load on filetype
+    ft = "python",
+    event = "User AstroFile",
+    config = function()
+      require('nvim-dap-repl-highlights').setup()
+      require('nvim-treesitter.configs').setup {
+        highlight = {
+          enable = true,
+        },
+        ensure_installed = { 'dap_repl' },
+      }
+    end,
+  },
   -- {
   --   "jupyter-vim/jupyter-vim",
   --   ft = { "pyhon", "julia" },
@@ -55,11 +71,6 @@ return {
   --   end,
   -- },
   -- {
-  --   "mtikekar/nvim-send-to-term",
-  --   init = function() vim.g.send_disable_mapping = true end,
-  --   keys = { "<Plug>Send", "<Plug>SendLine" },
-  --   cmd = "SendHere",
-  -- },
   -- {
   --   "AckslD/nvim-neoclip.lua",
   --   init = function() require('telescope').load_extension('neoclip') end,
