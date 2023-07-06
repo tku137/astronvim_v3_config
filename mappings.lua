@@ -112,7 +112,8 @@ return {
 
     -- some plugin mappings
     -- if lsp_lines is installed, this toggles it on or off
-    -- ["<leader>ll"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
+    ["<leader>lx"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
+    ["<leader>xs"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
 
     -- put aerial shortcuts under the 'find' menu
     -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },

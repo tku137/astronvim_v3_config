@@ -77,9 +77,9 @@ return {
     { "neogen", keys = { { "<leader>a", false } } },
   },
 
-  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
-  -- { import = "astrocommunity.markdown-and-latex.glow-nvim" },
+  { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   -- { import = "astrocommunity.editing-support.refactoring-nvim"}
 
@@ -107,7 +107,7 @@ return {
 
   -- others
   -- helping you establish good command workflow and habit
-  -- { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.workflow.hardtime-nvim" },
   -- project picker with telescope support
   { import = "astrocommunity.project.project-nvim" },
   -- { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
