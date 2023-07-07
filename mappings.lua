@@ -114,6 +114,9 @@ return {
     -- if lsp_lines is installed, this toggles it on or off
     -- ["<leader>lx"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
     -- ["<leader>xs"] = {require("lsp_lines").toggle, desc = "Toggle lsp lines",},
+    ["<leader>lP"] = { "<cmd>TSPlaygroundToggle<cr>", desc = "Toggle TS Playgound", },
+    ["<leader>lt"] = { "<cmd>TSHighlightCapturesUnderCursor<cr>", desc = "TS Highlight under Cursor", },
+    ["<leader>lT"] = { "<cmd>TSNodeUnderCursor<cr>", desc = "TS Node under Cursor", },
 
     -- put aerial shortcuts under the 'find' menu
     -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
