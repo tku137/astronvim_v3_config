@@ -32,11 +32,16 @@ return {
   },
   {
     "theHamsta/nvim-dap-virtual-text",
-    dependencies = { "mfussenegger/nvim-dap" },
+    dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
     -- NOTE: ft: lazy-load on filetype
     ft = "python",
     event = "User AstroFile",
-    config = function() require("nvim-dap-virtual-text").setup() end,
+    opts = {
+      commented = true,
+      enabled = true,
+      enabled_commands = true,
+    },
+    -- config = function() require("nvim-dap-virtual-text").setup() end,
     -- config = function() require("dap-python").setup('~/.virtualenvs/debugpy/bin/python') end,
   },
   {
