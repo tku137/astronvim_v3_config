@@ -48,6 +48,9 @@ return {
   -- { import = "astrocommunity.color.tint-nvim" },
   -- { import = "astrocommunity.editing-support.zen-mode-nvim" },
   -- { import = "astrocommunity.color.twilight-nvim" },
+  { import = "astrocommunity.split-and-window.edgy-nvim" },
+  -- { import = "astrocommunity.split-and-window.windows-nvim" },
+  { import = "astrocommunity.editing-support.comment-box-nvim" },
 
   -- code completion
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
@@ -76,6 +79,8 @@ return {
     { import = "astrocommunity.editing-support.neogen" },
     { "neogen", keys = { { "<leader>a", false } } },
   },
+  { import = "astrocommunity.debugging.telescope-dap-nvim" },
+  { import = "astrocommunity.programming-language-support.csv-vim" },
 
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
