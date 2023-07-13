@@ -112,7 +112,32 @@ return {
 
   -- others
   -- helping you establish good command workflow and habit
-  { import = "astrocommunity.workflow.hardtime-nvim" },
+  -- {
+  --   { import = "astrocommunity.workflow.hardtime-nvim" },
+  --   {
+  --     "hardtime.nvim",
+  --     opts = {
+  --       disabled_filetypes = {
+  --         "qf",
+  --         "netrw",
+  --         "NvimTree",
+  --         "lazy",
+  --         "mason",
+  --         "prompt",
+  --         "TelescopePrompt",
+  --         "noice",
+  --         "notify",
+  --         "neo-tree",
+  --         "dap-repl",
+  --         "dapui_console",
+  --         "dapui_scopes",
+  --         "dapui_breakpoints",
+  --         "dapui_stacks",
+  --         "dapui_watches",
+  --       }
+  --     }
+  --   },
+  -- },
   -- project picker with telescope support
   { import = "astrocommunity.project.project-nvim" },
   -- { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
