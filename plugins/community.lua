@@ -50,18 +50,6 @@ return {
   -- { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.split-and-window.edgy-nvim" },
   -- { import = "astrocommunity.split-and-window.windows-nvim" },
-  { import = "astrocommunity.editing-support.comment-box-nvim" },
-
-  -- code completion
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
-  -- { import = "astrocommunity.completion.codeium-vim" },
-
-  -- editing support
-  { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  {
-    { import = "astrocommunity.diagnostics.trouble-nvim" },
-    { "trouble.nvim", keys = { { "<leader>x", false } } },
-  },
   {
     { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
     {
@@ -75,11 +63,23 @@ return {
       },
     },
   },
+
+  -- code completion
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
+
+  -- editing support
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  {
+    { import = "astrocommunity.diagnostics.trouble-nvim" },
+    { "trouble.nvim", keys = { { "<leader>x", false } } },
+  },
   {
     { import = "astrocommunity.editing-support.neogen" },
     { "neogen", keys = { { "<leader>a", false } } },
   },
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
+  { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
 
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
@@ -87,13 +87,11 @@ return {
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   -- { import = "astrocommunity.editing-support.refactoring-nvim"}
+  { import = "astrocommunity.editing-support.telescope-undo-nvim"},
 
   -- motion
-  -- { import = "astrocommunity.motion.leap-nvim" },
-  -- { import = "astrocommunity.motion.flit-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
-  { import = "astrocommunity.motion.nvim-surround" },
-  -- { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.mini-surround" },
   -- { import = "astrocommunity.motion.mini-move" },
   {
     { import = "astrocommunity.motion.harpoon" },
@@ -140,5 +138,6 @@ return {
   -- },
   -- project picker with telescope support
   { import = "astrocommunity.project.project-nvim" },
+  { import = "astrocommunity.project.nvim-spectre" },
   -- { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
 }

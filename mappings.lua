@@ -4,7 +4,7 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 
-local astro_utils = require "astronvim.utils"
+-- local astro_utils = require "astronvim.utils"
 
 return {
   -- first key is the mode
@@ -55,41 +55,41 @@ return {
     },
 
     -- Codeium
-    ["<leader>;;"] = {
-      function()
-        vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
-        astro_utils.notify("Codeium " .. (vim.g.codeium_enabled == 0 and "Disabled" or "Enabled"))
-      end,
-      desc = "Toggle Global",
-    },
-    ["<leader>;b"] = {
-      function()
-        vim.cmd.Codeium(vim.b.codeium_enabled == 0 and "EnableBuffer" or "DisableBuffer")
-        astro_utils.notify("Codeium (buffer) " .. (vim.b.codeium_enabled == 0 and "Disabled" or "Enabled"))
-      end,
-      desc = "Toggle Buffer",
-    },
-    ["<leader>;a"] = {
-      function() return vim.fn["codeium#Accept"]() end,
-      desc = "Insert Suggestion",
-    },
-    ["<leader>;k"] = {
-      function() return vim.fn["codeium#CycleCompletions"](1) end,
-      desc = "Next Suggestion",
-    },
-    ["<leader>;j"] = {
-      function() return vim.fn["codeium#CycleCompletions"](-1) end,
-      desc = "Previous Suggestion",
-    },
-    ["<leader>;x"] = {
-      function() return vim.fn["codeium#Clear"]() end,
-      desc = "Clear Current Suggestion",
-    },
-    ["<leader>;m"] = {
-      function() return vim.fn["codeium#Complete"]() end,
-      desc = "Manually Trigger Suggestion",
-    },
-    ["<leader>;"] = { desc = "󰧑 AI Assistant" },
+    -- ["<leader>;;"] = {
+    --   function()
+    --     vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
+    --     astro_utils.notify("Codeium " .. (vim.g.codeium_enabled == 0 and "Disabled" or "Enabled"))
+    --   end,
+    --   desc = "Toggle Global",
+    -- },
+    -- ["<leader>;b"] = {
+    --   function()
+    --     vim.cmd.Codeium(vim.b.codeium_enabled == 0 and "EnableBuffer" or "DisableBuffer")
+    --     astro_utils.notify("Codeium (buffer) " .. (vim.b.codeium_enabled == 0 and "Disabled" or "Enabled"))
+    --   end,
+    --   desc = "Toggle Buffer",
+    -- },
+    -- ["<leader>;a"] = {
+    --   function() return vim.fn["codeium#Accept"]() end,
+    --   desc = "Insert Suggestion",
+    -- },
+    -- ["<leader>;k"] = {
+    --   function() return vim.fn["codeium#CycleCompletions"](1) end,
+    --   desc = "Next Suggestion",
+    -- },
+    -- ["<leader>;j"] = {
+    --   function() return vim.fn["codeium#CycleCompletions"](-1) end,
+    --   desc = "Previous Suggestion",
+    -- },
+    -- ["<leader>;x"] = {
+    --   function() return vim.fn["codeium#Clear"]() end,
+    --   desc = "Clear Current Suggestion",
+    -- },
+    -- ["<leader>;m"] = {
+    --   function() return vim.fn["codeium#Complete"]() end,
+    --   desc = "Manually Trigger Suggestion",
+    -- },
+    -- ["<leader>;"] = { desc = "󰧑 AI Assistant" },
 
 
     -- quick save
@@ -117,14 +117,8 @@ return {
     ["<leader>lP"] = { "<cmd>TSPlaygroundToggle<cr>", desc = "Toggle TS Playgound", },
     ["<leader>lt"] = { "<cmd>TSHighlightCapturesUnderCursor<cr>", desc = "TS Highlight under Cursor", },
     ["<leader>lT"] = { "<cmd>TSNodeUnderCursor<cr>", desc = "TS Node under Cursor", },
-    ["<leader>uH"] = { "<cmd>Hardtime toggle<cr>", desc = "Toggle Hardtime", },
-    ["<leader>fd"] = { name = "Debugger", },
-
-    -- put aerial shortcuts under the 'find' menu
-    -- ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
-    -- ["<leader>fS"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" },
-
-    -- put some plugin shortcuts under the 'find' menu
+    -- ["<leader>uH"] = { "<cmd>Hardtime toggle<cr>", desc = "Toggle Hardtime", },
+    ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
     ["<leader>fY"] = { "<cmd>Telescope neoclip<cr>", desc = "Find yanks" },
 
@@ -144,6 +138,7 @@ return {
     -- fix missing descriptions in which-key
     ["<leader><leader>"] = { desc = "󱡅 Harpoon" },
     ["<leader>a"] = { desc = " Annotation" },
+    ["<leader>fd"] = { desc = "Debugger", },
 
     -- visuals
     -- ["<leader>uT"] = {

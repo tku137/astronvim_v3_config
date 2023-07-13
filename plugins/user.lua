@@ -1,21 +1,6 @@
 return {
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function() require("lsp_signature").setup() end,
-  -- },
-  -- {
-  --   "ggandor/leap.nvim",
-  --   event = "BufRead",
-  --   config = function() require("leap").add_default_mappings() end,
-  -- },
-  -- {
-  --   "github/copilot.vim",
-  --   event = "BufRead",
-  -- },
   {
     "linux-cultist/venv-selector.nvim",
     opts = {},
@@ -74,17 +59,5 @@ return {
   --       },
   --     }
   --   end,
-  -- },
-  -- {
-  -- {
-  --   "AckslD/nvim-neoclip.lua",
-  --   init = function() require('telescope').load_extension('neoclip') end,
-  --   event = { "User AstroFile" },
-  --   dependencies = {
-  --     -- you'll need at least one of these
-  --     {'nvim-telescope/telescope.nvim'},
-  --     -- {'ibhagwan/fzf-lua'},
-  --   },
-  --   config = function() require("neoclip").setup() end,
   -- },
 }
