@@ -122,6 +122,15 @@ return {
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
     ["<leader>fY"] = { "<cmd>Telescope neoclip<cr>", desc = "Find yanks" },
 
+    -- Diffview mappings
+    ["<leader>gDo"] = { "<cmd>DiffviewOpen<cr>", desc = "Open" },
+    ["<leader>gDc"] = { "<cmd>DiffviewClose<cr>", desc = "Close" },
+    ["<leader>gDr"] = { "<cmd>DiffviewRefresh<cr>", desc = "Refresh" },
+    ["<leader>gDf"] = { "<cmd>DiffviewFileHistory<cr>", desc = "File history" },
+    ["<leader>gDF"] = { "<cmd>DiffviewFileHistory %<cr>", desc = "Current file history" },
+    ["<leader>gDm"] = { "<cmd>h Diffview-merge-tool<cr>", desc = "Help merge tool" },
+    ["<leader>gD"] = { desc = " Diffview" },
+
     -- put todo-comments under trouble group
     ["<leader>xt"] = { "<cmd>TodoTelescope<cr>", desc = "Open Todos in Telescope" },
     ["<leader>xT"] = { "<cmd>TodoTrouble<cr>", desc = "Open Todos in Trouble" },
