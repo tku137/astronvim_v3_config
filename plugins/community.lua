@@ -70,14 +70,8 @@ return {
 
   -- editing support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  {
-    { import = "astrocommunity.diagnostics.trouble-nvim" },
-    { "trouble.nvim", keys = { { "<leader>x", false } } },
-  },
-  {
-    { import = "astrocommunity.editing-support.neogen" },
-    { "neogen", keys = { { "<leader>a", false } } },
-  },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.editing-support.neogen" },
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
@@ -95,10 +89,7 @@ return {
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   -- { import = "astrocommunity.motion.mini-move" },
-  {
-    { import = "astrocommunity.motion.harpoon" },
-    { "harpoon", keys = { { "<leader><leader>",  false } } },
-  },
+  { import = "astrocommunity.motion.harpoon" },
 
   -- packs
   -- { import = "astrocommunity.pack.python" },

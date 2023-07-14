@@ -136,7 +136,7 @@ return {
     ["<leader>xT"] = { "<cmd>TodoTrouble<cr>", desc = "Open Todos in Trouble" },
     ["<leader>xQ"] = { "<cmd>TodoQuickFix<cr>", desc = "Quickfix List (Todo)" },
     ["<leader>xL"] = { "<cmd>TodoLocList<cr>", desc = "Location List (Todo)" },
-    ["<leader>x"] = { desc = "󰒡 Trouble" },
+    -- ["<leader>x"] = { desc = "󰒡 Trouble" },
 
     -- REPL via send-to-term
     ["<leader>rr"] = { "<Plug>Send", desc = "Send to REPL" },
@@ -145,8 +145,6 @@ return {
     ["<leader>r"] = { desc = " REPL" },
 
     -- fix missing descriptions in which-key
-    ["<leader><leader>"] = { desc = "󱡅 Harpoon" },
-    ["<leader>a"] = { desc = " Annotation" },
     ["<leader>fd"] = { desc = "Debugger", },
 
     -- visuals
