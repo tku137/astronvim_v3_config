@@ -8,12 +8,12 @@ return {
   },
   {
     "mfussenegger/nvim-dap-python",
-    dependencies = { "mfussenegger/nvim-dap" },
-    -- NOTE: ft: lazy-load on filetype
-    ft = "python",
-    event = "User AstroFile",
-    config = function() require("dap-python").setup("python", {}) end,
-    -- config = function() require("dap-python").setup('~/.virtualenvs/debugpy/bin/python') end,
+    dependencies = "mfussenegger/nvim-dap",
+    ft = "python", -- NOTE: ft: lazy-load on filetype
+    config = function(_, opts)
+      local path = require("mason-registry").get_package("debugpy"):get_install_path() .. "/venv/bin/python"
+      require("dap-python").setup(path, opts)
+    end,
   },
   {
     "theHamsta/nvim-dap-virtual-text",
