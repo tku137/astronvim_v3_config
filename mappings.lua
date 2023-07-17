@@ -120,7 +120,6 @@ return {
     -- ["<leader>uH"] = { "<cmd>Hardtime toggle<cr>", desc = "Toggle Hardtime", },
     ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
-    ["<leader>fY"] = { "<cmd>Telescope neoclip<cr>", desc = "Find yanks" },
 
     -- Diffview mappings
     ["<leader>gDo"] = { "<cmd>DiffviewOpen<cr>", desc = "Open" },

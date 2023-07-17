@@ -76,6 +76,8 @@ return {
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
 
+  { import = "astrocommunity.register.nvim-neoclip-lua" },
+
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
