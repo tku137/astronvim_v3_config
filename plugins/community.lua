@@ -73,6 +73,7 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.neogen" },
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
 
@@ -85,7 +86,7 @@ return {
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   -- { import = "astrocommunity.editing-support.refactoring-nvim"}
-  { import = "astrocommunity.editing-support.telescope-undo-nvim"},
+  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
 
   -- motion
   { import = "astrocommunity.motion.flash-nvim" },
@@ -94,10 +95,13 @@ return {
   { import = "astrocommunity.motion.harpoon" },
 
   -- packs
-  -- { import = "astrocommunity.pack.python" },
-  -- { import = "astrocommunity.pack.markdown" },
-  -- { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.bash" },
 
   -- note taking
   -- { import = "astrocommunity.note-taking.neorg" },
