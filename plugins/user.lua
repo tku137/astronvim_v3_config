@@ -32,20 +32,20 @@ return {
   --   -- config = function() require("nvim-dap-virtual-text").setup() end,
   --   -- config = function() require("dap-python").setup('~/.virtualenvs/debugpy/bin/python') end,
   -- },
-  {
-    "LiadOz/nvim-dap-repl-highlights",
-    dependencies = { "mfussenegger/nvim-dap" },
-    -- NOTE: ft: lazy-load on filetype
-    ft = "python",
-    event = "User AstroFile",
-    config = function()
-      require('nvim-dap-repl-highlights').setup()
-      require('nvim-treesitter.configs').setup {
-        highlight = {
-          enable = true,
-        },
-        ensure_installed = { 'dap_repl' },
-      }
-    end,
-  },
+  -- {
+  --   "LiadOz/nvim-dap-repl-highlights",
+  --   dependencies = { "mfussenegger/nvim-dap" },
+  --   -- NOTE: ft: lazy-load on filetype
+  --   ft = "python",
+  --   event = "User AstroFile",
+  --   config = function()
+  --     require('nvim-dap-repl-highlights').setup()
+  --     require('nvim-treesitter.configs').setup {
+  --       highlight = {
+  --         enable = true,
+  --       },
+  --       ensure_installed = { 'dap_repl' },
+  --     }
+  --   end,
+  -- },
 }
