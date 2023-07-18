@@ -1,20 +1,16 @@
-"YAML Snippet for structured question": {
-  "prefix": "ques",
-  "body": [
-    "- Question: ${1:question}",
-    "  Description: >",
-    "    ${2:description}",
-    "  SQLQuery: |",
-    "    SELECT",
-    "      ${3:select}",
-    "    FROM",
-    "      ${4:from}",
-    "    GROUP BY",
-    "      ${5:groupby}",
-    "    ORDER BY",
-    "      ${6:orderby}",
-    "    LIMIT ${7:limit};",
-    ""
-  ],
-  "description": "YAML Snippet for structured question"
+{
+  "setup": {
+    "prefix": ["sql-ques"],
+    "body": [
+      "- Question: $1",
+      "  Description: >",
+      "    $2",
+      "  SQLQuery: |",
+      "    SELECT",
+      "      $3",
+      "    FROM",
+      "      $4;"
+    ],
+    "description": "LLM question example."
+  }
 }
