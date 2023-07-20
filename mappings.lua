@@ -144,7 +144,8 @@ return {
     ["<leader>r"] = { desc = " REPL" },
 
     -- fix missing descriptions in which-key
-    ["<leader>fd"] = { desc = "Debugger", },
+    ["<leader>fd"] = { desc = "󰃤 Debugger", },
+    ["<leader>gn"] = { desc = "󰊢 Neogit", },
 
     -- visuals
     -- ["<leader>uT"] = {
