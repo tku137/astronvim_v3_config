@@ -147,6 +147,12 @@ return {
     ["<leader>fd"] = { desc = "󰃤 Debugger", },
     ["<leader>gn"] = { desc = "󰊢 Neogit", },
 
+    -- debug mappings
+    ["<leader>dPm"] = { "require('dap-python').test_method()", desc = "Debug method" },
+    ["<leader>dPc"] = { "require('dap-python').test_class()", desc = "Debug class" },
+    ["<leader>dPs"] = { "<ESC>:lua require('dap-python').debug_selection()", desc = "Debug selection" },
+    ["<leader>dP"] = { desc = " Python debugger", },
+
     -- visuals
     -- ["<leader>uT"] = {
     --   function() require("tint").toggle() end,
