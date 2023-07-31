@@ -71,22 +71,22 @@ return {
       -- if not opts.handlers then opts.handlers = {} end
       -- opts.handlers.python = function() end -- make sure python doesn't get set up by mason-nvim-dap, it's being set up by nvim-dap-python
       -- below working example on custom debug launch, but its encouraged to use nvim-dap-python instead
-      -- opts.handlers = {
-      --   python = function(config)
-      --     config.configurations = {
-      --       {
-      --         type = "python",
-      --         request = "launch",
-      --         name = "Python: Debug file with justMyCode=false",
-      --         program = "${file}",
-      --         justMyCode = false,
-      --         -- console = "integratedTerminal",
-      --         -- pythonPath = function() return "python" end,
-      --       },
-      --     }
-      --     require("mason-nvim-dap").default_setup(config) -- don't forget this!
-      --   end,
-      -- }
+      opts.handlers = {
+        python = function(config)
+          config.configurations = {
+            {
+              type = "python",
+              request = "launch",
+              name = "Python: Debug file with justMyCode=false",
+              program = "${file}",
+              justMyCode = false,
+              -- console = "integratedTerminal",
+              -- pythonPath = function() return "python" end,
+            },
+          }
+          require("mason-nvim-dap").default_setup(config) -- don't forget this!
+        end,
+      }
     end,
   },
 }

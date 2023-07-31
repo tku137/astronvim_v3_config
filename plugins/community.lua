@@ -78,24 +78,26 @@ return {
   { import = "astrocommunity.motion.harpoon" },
 
   -- packs
-  {
-    { import = "astrocommunity.pack.python" },
-    {
-      "mfussenegger/nvim-dap-python",
-      config = function(_, opts)
-        local path = require("mason-registry").get_package("debugpy"):get_install_path() .. "/venv/bin/python"
-        require("dap-python").setup(path, opts)
-        table.insert(require('dap').configurations.python, {
-          type = 'python',
-          request = 'launch',
-          name = 'Launch file with justMyCode=false',
-          program = '${file}',
-          -- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
-          justMyCode = false,
-        })
-      end,
-    }
-  },
+  { import = "astrocommunity.pack.python" },
+  -- {
+  --   { import = "astrocommunity.pack.python" },
+  --   {
+  --     "mfussenegger/nvim-dap-python",
+  --     dependencies = "mfussenegger/nvim-dap",
+  --     config = function(_, opts)
+  --       local path = require("mason-registry").get_package("debugpy"):get_install_path() .. "/venv/bin/python"
+  --       require("dap-python").setup(path, opts)
+  --       table.insert(require('dap').configurations.python, {
+  --         type = 'python',
+  --         request = 'launch',
+  --         name = 'Launch file with justMyCode=false',
+  --         program = '${file}',
+  --         -- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
+  --         justMyCode = false,
+  --       })
+  --     end,
+  --   }
+  -- },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.lua" },
