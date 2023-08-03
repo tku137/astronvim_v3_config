@@ -164,7 +164,7 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
-    ["<C-BS>"] = { "<C-\\><C-n>", desc = "Terminal normal mode" },
+    ["<C-Space>"] = { "<C-\\><C-n>", desc = "Terminal normal mode" },
     ["<esc><esc>"] = { "<C-\\><C-n>:q<cr>", desc = "Terminal quit" },
   },
   v = {
