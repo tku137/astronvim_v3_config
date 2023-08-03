@@ -1,10 +1,4 @@
 return {
-    {
-      "mtikekar/nvim-send-to-term",
-      init = function() vim.g.send_disable_mapping = true end,
-      keys = { "<Plug>Send", "<Plug>SendLine" },
-      cmd = "SendHere",
-    }
   -- {
   --   "christoomey/vim-tmux-navigator",
   --   lazy = false,
@@ -70,4 +64,26 @@ return {
   --     }
   --   }) end
   -- },
+  -- {
+  --   "mtikekar/nvim-send-to-term",
+  --   init = function() vim.g.send_disable_mapping = true end,
+  --   keys = { "<Plug>Send", "<Plug>SendLine" },
+  --   cmd = "SendHere",
+  -- },
+  {
+    "geg2102/nvim-python-repl",
+    dependencies = "nvim-treesitter",
+    ft = {"python", "lua", "scala"},
+    config = function()
+      require("nvim-python-repl").setup({
+        execute_on_send = true,
+        vsplit = true,
+        spawn_command={
+          python="ipython",
+          scala="sbt console",
+          lua="ilua"
+        }
+      })
+    end
+  },
 }

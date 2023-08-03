@@ -4,7 +4,7 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 
--- local astro_utils = require "astronvim.utils"
+local astro_utils = require "astronvim.utils"
 
 return {
   -- first key is the mode
@@ -138,9 +138,22 @@ return {
     -- ["<leader>x"] = { desc = "󰒡 Trouble" },
 
     -- REPL via send-to-term
-    ["<leader>rr"] = { "<Plug>Send", desc = "Send to REPL" },
-    ["<leader>rl"] = { "<Plug>SendLine", desc = "Send line to REPL" },
-    ["<leader>r<cr>"] = { "<cmd>SendHere<cr>", desc = "Set REPL" },
+    -- ["<leader>rR"] = { "<Plug>Send", desc = "Send to REPL" },
+    -- ["<leader>rL"] = { "<Plug>SendLine", desc = "Send line to REPL" },
+    -- ["<leader>r<cr>"] = { "<cmd>SendHere<cr>", desc = "Set REPL" },
+
+    -- REPL via nvim-python-repl
+    ["<leader>rr"] = { function() require('nvim-python-repl').send_statement_definition() end, desc = "Send semantic unit to REPL" },
+    ["<leader>rb"] = { function() require('nvim-python-repl').send_buffer_to_repl() end, desc = "Send entire buffer to REPL" },
+    ["<leader>re"] = { function()
+        require('nvim-python-repl').toggle_execute()
+        astro_utils.notify("Automatic REPL execution " .. (require("nvim-python-repl.config").defaults["execute_on_send"] == true and "Enabled" or "Disabled"))
+      end, desc = "Toggle automatic execution" },
+    ["<leader>rv"] = { function()
+        require('nvim-python-repl').toggle_vertical()
+        astro_utils.notify("REPL split set to " .. (require("nvim-python-repl.config").defaults["vsplit"] == true and "Vertical" or "Horizontal"))
+      end, desc = "Toggle vertical/horizontal split" },
+
     ["<leader>r"] = { desc = " REPL" },
 
     -- fix missing descriptions in which-key
@@ -168,7 +181,8 @@ return {
     ["<esc><esc>"] = { "<C-\\><C-n>:q<cr>", desc = "Terminal quit" },
   },
   v = {
-    ["<leader>r"] = { "<Plug>Send", desc = "Send to REPL" },
+    -- ["<leader>r"] = { "<Plug>Send", desc = "Send to REPL" },
+    ["<leader>r"] = { function() require('nvim-python-repl').send_visual_to_repl() end, desc = "Send visual selection to REPL" },
     -- ["<leader>s"] = { function() require("spectre").open_visual() end, desc = "Spectre" },
     -- Search inside visually highlighted text. Use `silent = false` for it to
     -- make effect immediately.
