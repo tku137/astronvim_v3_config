@@ -111,6 +111,7 @@ return {
 
   -- others
   -- helping you establish good command workflow and habit
+  { import = "astrocommunity.workflow.hardtime-nvim" },
   -- {
   --   { import = "astrocommunity.workflow.hardtime-nvim" },
   --   {

@@ -117,7 +117,7 @@ return {
     ["<leader>lP"] = { "<cmd>TSPlaygroundToggle<cr>", desc = "Toggle TS Playgound", },
     ["<leader>lt"] = { "<cmd>TSHighlightCapturesUnderCursor<cr>", desc = "TS Highlight under Cursor", },
     ["<leader>lT"] = { "<cmd>TSNodeUnderCursor<cr>", desc = "TS Node under Cursor", },
-    -- ["<leader>uH"] = { "<cmd>Hardtime toggle<cr>", desc = "Toggle Hardtime", },
+    ["<leader>uH"] = { "<cmd>Hardtime toggle<cr>", desc = "Toggle Hardtime", },
     ["<leader>fs"] = { "<cmd>Telescope aerial<cr>", desc = "Search symbols" },
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
 
