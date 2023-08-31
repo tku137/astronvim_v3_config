@@ -157,7 +157,7 @@ return {
     ["<leader>r"] = { desc = " REPL" },
 
     -- fix missing descriptions in which-key
-    ["<leader>fd"] = { desc = "󰃤 Debugger", },
+    ["<leader>dt"] = { desc = "󰃤 Telescope DAP", },
     ["<leader>gn"] = { desc = "󰊢 Neogit", },
 
     -- debug mappings
