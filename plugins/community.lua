@@ -58,6 +58,7 @@ return {
   { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
+  { import = "astrocommunity.editing-support.nvim-devdocs" },
 
   { import = "astrocommunity.register.nvim-neoclip-lua" },
 
