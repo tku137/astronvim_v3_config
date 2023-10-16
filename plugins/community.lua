@@ -77,7 +77,7 @@ return {
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   -- { import = "astrocommunity.motion.mini-move" },
-  { import = "astrocommunity.motion.harpoon" },
+  -- { import = "astrocommunity.motion.harpoon" },
 
   -- packs
   { import = "astrocommunity.pack.python" },
@@ -113,7 +113,7 @@ return {
 
   -- others
   -- helping you establish good command workflow and habit
-  { import = "astrocommunity.workflow.hardtime-nvim" },
+  -- { import = "astrocommunity.workflow.hardtime-nvim" },
   -- {
   --   { import = "astrocommunity.workflow.hardtime-nvim" },
   --   {
