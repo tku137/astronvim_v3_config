@@ -38,7 +38,7 @@ return {
     config = function(_, opts)
       local path = require("mason-registry").get_package("debugpy"):get_install_path() .. "/venv/bin/python"
       require("dap-python").setup(path, opts)
-      table.insert(require('dap').configurations.python, {
+      table.insert(require('dap').configurations.python, 1, {
         type = 'python',
         request = 'launch',
         name = 'Python: Debug file with justMyCode=false',
