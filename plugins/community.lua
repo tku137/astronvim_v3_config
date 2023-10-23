@@ -80,7 +80,7 @@ return {
   -- { import = "astrocommunity.motion.harpoon" },
 
   -- packs
-  { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.python" },
   -- {
   --   { import = "astrocommunity.pack.python" },
   --   {
