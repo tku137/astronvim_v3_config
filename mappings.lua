@@ -36,13 +36,13 @@ return {
     ["<leader>b"] = { name = "Buffers" },
 
     -- Tab Mappings
-    ["<leader>Tn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>Tc"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
-    ["<leader>Th"] = { "<cmd>tabprevious<cr>", desc = "Left tab" },
-    ["<leader>Tl"] = { "<cmd>tabnext<cr>", desc = "Right tab" },
+    ["<leader>btn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>btc"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
+    ["<leader>bth"] = { "<cmd>tabprevious<cr>", desc = "Left tab" },
+    ["<leader>btl"] = { "<cmd>tabnext<cr>", desc = "Right tab" },
     -- a table with the `name` key will register with which-key if it's available
     -- this an easy way to add menu titles in which-key
-    ["<leader>T"] = { name = "󰓩 Tabs" },
+    ["<leader>bt"] = { name = "󰓩 Tabs" },
 
     -- open dashboard when no more buffers open
     ["<leader>c"] = {
@@ -165,6 +165,20 @@ return {
     ["<leader>dPc"] = { "require('dap-python').test_class()", desc = "Debug class" },
     ["<leader>dPs"] = { "<ESC>:lua require('dap-python').debug_selection()", desc = "Debug selection" },
     ["<leader>dP"] = { desc = " Python debugger", },
+
+    -- testing
+    ["<leader>T"] = { name = "󰙨 Test" },
+    ["<leader>TF"] = { "<cmd>w|lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", desc = "Debug File" },
+    ["<leader>TL"] = { "<cmd>w|lua require('neotest').run.run_last({strategy = 'dap'})<cr>", desc = "Debug Last" },
+    ["<leader>Ta"] = { "<cmd>w|lua require('neotest').run.attach()<cr>", desc = "Attach" },
+    ["<leader>Tf"] = { "<cmd>w|lua require('neotest').run.run(vim.fn.expand('%'))<cr>", desc = "File" },
+    ["<leader>Tl"] = { "<cmd>w|lua require('neotest').run.run_last()<cr>", desc = "Last" },
+    ["<leader>Tn"] = { "<cmd>w|lua require('neotest').run.run()<cr>", desc = "Nearest" },
+    ["<leader>TN"] = { "<cmd>w|lua require('neotest').run.run({strategy = 'dap'})<cr>", desc = "Debug Nearest" },
+    ["<leader>To"] = { "<cmd>w|lua require('neotest').output.open({ enter = true })<cr>", desc = "Output" },
+    ["<leader>Ts"] = { "<cmd>w|lua require('neotest').run.stop()<cr>", desc = "Stop" },
+    ["<leader>TS"] = { "<cmd>w|lua require('neotest').summary.toggle()<cr>", desc = "Summary" },
+
 
     -- visuals
     -- ["<leader>uT"] = {
