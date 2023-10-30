@@ -179,6 +179,7 @@ return {
     ["<leader>Ts"] = { "<cmd>w|lua require('neotest').run.stop()<cr>", desc = "Stop" },
     ["<leader>TS"] = { "<cmd>w|lua require('neotest').summary.toggle()<cr>", desc = "Summary" },
 
+    ["<leader>R"] = { desc = "󰵉 Refactoring" },
 
     -- visuals
     -- ["<leader>uT"] = {
