@@ -12,6 +12,10 @@ return {
       "catppuccin",
       opts = {
         flavour = "macchiato", -- latte, frappe, macchiato, mocha
+        background = { -- :h background
+          light = "latte",
+          dark = "macchiato",
+        },
         term_colors = true,
         dim_inactive = { enabled = true, percentage = 0.25 },
         integrations = {
