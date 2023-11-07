@@ -74,7 +74,7 @@ return {
   -- { import = "astrocommunity.test.neotest" },
 
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
-  { import = "astrocommunity.markdown-and-latex.peek-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   -- { import = "astrocommunity.editing-support.refactoring-nvim"}
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
