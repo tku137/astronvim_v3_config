@@ -1,20 +1,19 @@
-return {}
--- return {
---   "Exafunction/codeium.vim",
---   cmd = "Codeium",
---   event = "User AstroFile",
---   init = function()
---     vim.g.codeium_enabled = 0
---     vim.g.codeium_disable_bindings = 1
---     vim.g.codeium_idle_delay = 1500
---     vim.b.codeium_enabled = 0
---     vim.b.codeium_disable_bindings = 1
---     vim.b.codeium_idle_delay = 1500
---   end,
---   config = function()
---     vim.keymap.set("i", "<C-;>", function() return vim.fn["codeium#Accept"]() end, { expr = true, desc = "Insert Suggestion" })
---     vim.keymap.set("i", "<C-->", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true, desc = "Next Suggestion" })
---     vim.keymap.set("i", "<C-=>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true, desc = "Previous Suggestion" })
---     vim.keymap.set("i", "<C-,>", function() return vim.fn["codeium#Clear"]() end, { expr = true, desc = "Clear Current Suggestion" })
---   end,
--- }
+-- return {}
+return {
+  "Exafunction/codeium.vim",
+  event = "User AstroFile",
+  config = function()
+    -- vim.cmd "CodeiumDisable"
+    vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
+    vim.keymap.set("i", "<C-;>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
+    vim.keymap.set("i", "<C-,>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
+    vim.keymap.set("i", "<C-x>", function() return vim.fn["codeium#Clear"]() end, { expr = true })
+    -- vim.keymap.set("n", "<leader>;", function()
+    --   if vim.g.codeium_enabled == true then
+    --     vim.cmd "CodeiumDisable"
+    --   else
+    --     vim.cmd "CodeiumEnable"
+    --   end
+    -- end, { noremap = true, desc = "Toggle Codeium active" })
+  end,
+}

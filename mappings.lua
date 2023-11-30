@@ -55,41 +55,41 @@ return {
     },
 
     -- Codeium
-    -- ["<leader>;;"] = {
-    --   function()
-    --     vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
-    --     astro_utils.notify("Codeium " .. (vim.g.codeium_enabled == 0 and "Disabled" or "Enabled"))
-    --   end,
-    --   desc = "Toggle Global",
-    -- },
-    -- ["<leader>;b"] = {
-    --   function()
-    --     vim.cmd.Codeium(vim.b.codeium_enabled == 0 and "EnableBuffer" or "DisableBuffer")
-    --     astro_utils.notify("Codeium (buffer) " .. (vim.b.codeium_enabled == 0 and "Disabled" or "Enabled"))
-    --   end,
-    --   desc = "Toggle Buffer",
-    -- },
-    -- ["<leader>;a"] = {
-    --   function() return vim.fn["codeium#Accept"]() end,
-    --   desc = "Insert Suggestion",
-    -- },
-    -- ["<leader>;k"] = {
-    --   function() return vim.fn["codeium#CycleCompletions"](1) end,
-    --   desc = "Next Suggestion",
-    -- },
-    -- ["<leader>;j"] = {
-    --   function() return vim.fn["codeium#CycleCompletions"](-1) end,
-    --   desc = "Previous Suggestion",
-    -- },
-    -- ["<leader>;x"] = {
-    --   function() return vim.fn["codeium#Clear"]() end,
-    --   desc = "Clear Current Suggestion",
-    -- },
-    -- ["<leader>;m"] = {
-    --   function() return vim.fn["codeium#Complete"]() end,
-    --   desc = "Manually Trigger Suggestion",
-    -- },
-    -- ["<leader>;"] = { desc = "󰧑 AI Assistant" },
+    ["<leader>;;"] = {
+      function()
+        vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
+        astro_utils.notify("Codeium " .. (vim.g.codeium_enabled == 0 and "Disabled" or "Enabled"))
+      end,
+      desc = "Toggle Global",
+    },
+    ["<leader>;b"] = {
+      function()
+        vim.cmd.Codeium(vim.b.codeium_enabled == 0 and "EnableBuffer" or "DisableBuffer")
+        astro_utils.notify("Codeium (buffer) " .. (vim.b.codeium_enabled == 0 and "Disabled" or "Enabled"))
+      end,
+      desc = "Toggle Buffer",
+    },
+    ["<leader>;a"] = {
+      function() return vim.fn["codeium#Accept"]() end,
+      desc = "Insert Suggestion",
+    },
+    ["<leader>;k"] = {
+      function() return vim.fn["codeium#CycleCompletions"](1) end,
+      desc = "Next Suggestion",
+    },
+    ["<leader>;j"] = {
+      function() return vim.fn["codeium#CycleCompletions"](-1) end,
+      desc = "Previous Suggestion",
+    },
+    ["<leader>;x"] = {
+      function() return vim.fn["codeium#Clear"]() end,
+      desc = "Clear Current Suggestion",
+    },
+    ["<leader>;m"] = {
+      function() return vim.fn["codeium#Complete"]() end,
+      desc = "Manually Trigger Suggestion",
+    },
+    ["<leader>;"] = { desc = "󰧑 AI Assistant" },
 
 
     -- quick save
