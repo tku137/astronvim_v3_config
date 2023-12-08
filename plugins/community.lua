@@ -50,8 +50,9 @@ return {
   },
 
   -- code completion
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.completion.cmp-cmdline" },
 
   -- editing support
   { import = "astrocommunity.editing-support.todo-comments-nvim" },

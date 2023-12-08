@@ -55,41 +55,41 @@ return {
     },
 
     -- Codeium
-    ["<leader>;;"] = {
-      function()
-        vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
-        astro_utils.notify("Codeium " .. (vim.g.codeium_enabled == 0 and "Disabled" or "Enabled"))
-      end,
-      desc = "Toggle Global",
-    },
-    ["<leader>;b"] = {
-      function()
-        vim.cmd.Codeium(vim.b.codeium_enabled == 0 and "EnableBuffer" or "DisableBuffer")
-        astro_utils.notify("Codeium (buffer) " .. (vim.b.codeium_enabled == 0 and "Disabled" or "Enabled"))
-      end,
-      desc = "Toggle Buffer",
-    },
-    ["<leader>;a"] = {
-      function() return vim.fn["codeium#Accept"]() end,
-      desc = "Insert Suggestion",
-    },
-    ["<leader>;k"] = {
-      function() return vim.fn["codeium#CycleCompletions"](1) end,
-      desc = "Next Suggestion",
-    },
-    ["<leader>;j"] = {
-      function() return vim.fn["codeium#CycleCompletions"](-1) end,
-      desc = "Previous Suggestion",
-    },
-    ["<leader>;x"] = {
-      function() return vim.fn["codeium#Clear"]() end,
-      desc = "Clear Current Suggestion",
-    },
-    ["<leader>;m"] = {
-      function() return vim.fn["codeium#Complete"]() end,
-      desc = "Manually Trigger Suggestion",
-    },
-    ["<leader>;"] = { desc = "󰧑 AI Assistant" },
+    -- ["<leader>;;"] = {
+    --   function()
+    --     vim.cmd.Codeium(vim.g.codeium_enabled == 0 and "Enable" or "Disable")
+    --     astro_utils.notify("Codeium " .. (vim.g.codeium_enabled == 0 and "Disabled" or "Enabled"))
+    --   end,
+    --   desc = "Toggle Global",
+    -- },
+    -- ["<leader>;b"] = {
+    --   function()
+    --     vim.cmd.Codeium(vim.b.codeium_enabled == 0 and "EnableBuffer" or "DisableBuffer")
+    --     astro_utils.notify("Codeium (buffer) " .. (vim.b.codeium_enabled == 0 and "Disabled" or "Enabled"))
+    --   end,
+    --   desc = "Toggle Buffer",
+    -- },
+    -- ["<leader>;a"] = {
+    --   function() return vim.fn["codeium#Accept"]() end,
+    --   desc = "Insert Suggestion",
+    -- },
+    -- ["<leader>;k"] = {
+    --   function() return vim.fn["codeium#CycleCompletions"](1) end,
+    --   desc = "Next Suggestion",
+    -- },
+    -- ["<leader>;j"] = {
+    --   function() return vim.fn["codeium#CycleCompletions"](-1) end,
+    --   desc = "Previous Suggestion",
+    -- },
+    -- ["<leader>;x"] = {
+    --   function() return vim.fn["codeium#Clear"]() end,
+    --   desc = "Clear Current Suggestion",
+    -- },
+    -- ["<leader>;m"] = {
+    --   function() return vim.fn["codeium#Complete"]() end,
+    --   desc = "Manually Trigger Suggestion",
+    -- },
+    -- ["<leader>;"] = { desc = "󰧑 AI Assistant" },
 
 
     -- quick save
@@ -143,18 +143,19 @@ return {
     -- ["<leader>r<cr>"] = { "<cmd>SendHere<cr>", desc = "Set REPL" },
 
     -- REPL via nvim-python-repl
-    ["<leader>rr"] = { function() require('nvim-python-repl').send_statement_definition() end, desc = "Send semantic unit to REPL" },
-    ["<leader>rb"] = { function() require('nvim-python-repl').send_buffer_to_repl() end, desc = "Send entire buffer to REPL" },
-    ["<leader>re"] = { function()
+    ["<leader>tr"] = { function() require('nvim-python-repl').send_statement_definition() end, desc = "Send semantic unit to REPL" },
+    ["<leader>r"] = { function() require('nvim-python-repl').send_statement_definition() end, desc = "Send semantic unit to REPL" },
+    ["<leader>tb"] = { function() require('nvim-python-repl').send_buffer_to_repl() end, desc = "Send entire buffer to REPL" },
+    ["<leader>tE"] = { function()
         require('nvim-python-repl').toggle_execute()
         astro_utils.notify("Automatic REPL execution " .. (require("nvim-python-repl.config").defaults["execute_on_send"] == true and "Enabled" or "Disabled"))
       end, desc = "Toggle automatic execution" },
-    ["<leader>rv"] = { function()
+    ["<leader>tV"] = { function()
         require('nvim-python-repl').toggle_vertical()
         astro_utils.notify("REPL split set to " .. (require("nvim-python-repl.config").defaults["vsplit"] == true and "Vertical" or "Horizontal"))
       end, desc = "Toggle vertical/horizontal split" },
 
-    ["<leader>r"] = { desc = " REPL" },
+    -- ["<leader>r"] = { desc = " REPL" },
 
     -- fix missing descriptions in which-key
     ["<leader>dt"] = { desc = "󰃤 Telescope DAP", },

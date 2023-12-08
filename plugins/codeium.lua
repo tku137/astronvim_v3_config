@@ -1,6 +1,7 @@
 -- return {}
 return {
   "Exafunction/codeium.vim",
+  enabled = false,
   event = "User AstroFile",
   config = function()
     -- vim.cmd "CodeiumDisable"
