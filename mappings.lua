@@ -182,6 +182,12 @@ return {
 
     ["<leader>R"] = { desc = "󰵉 Refactoring" },
 
+    -- common commands
+    ["<leader>DG"] = { "<cmd>Neogit<cr>", desc = " Open Neogit", },
+    ["<leader>DD"] = { "<cmd>DiffviewOpen<cr>", desc = " Open Diffview", },
+    ["<leader>DN"] = { "<cmd>w|lua require('neotest').summary.open()<cr>", desc = "󰙨 Open Neotest" },
+    ["<leader>D"] = { desc = "󰘦 DevOps" },
+
     -- visuals
     -- ["<leader>uT"] = {
     --   function() require("tint").toggle() end,
