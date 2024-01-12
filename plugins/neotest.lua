@@ -25,10 +25,10 @@ return {
           require "neotest-rust",
           require "neotest-python" {
             dap = { justMyCode = false },
-            args = {"--log-level", "DEBUG"},
+            args = {"--log-level", "DEBUG", "--cov"},
             runner = "pytest",
             -- python = "/Users/tony/getml/chat-project/lalia/.venv/lalia/bin/python",
-            pytest_discover_instances = true,
+            -- pytest_discover_instances = true,
           },
         },
       }
@@ -45,6 +45,14 @@ return {
         },
       }, neotest_ns)
       require("neotest").setup(opts)
+    end,
+  },
+  {
+    "andythigpen/nvim-coverage",
+    event = "User AstroFile",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("coverage").setup()
     end,
   },
   {
