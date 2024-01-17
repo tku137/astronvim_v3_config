@@ -79,6 +79,7 @@ return {
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   -- { import = "astrocommunity.editing-support.refactoring-nvim"}
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
+  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 
   -- motion
   { import = "astrocommunity.motion.flash-nvim" },
