@@ -1,11 +1,11 @@
 return {
   {
     "nvim-neotest/neotest",
-    ft = { "go", "rust", "python" },
+    ft = { "python" },
     dependencies = {
-      "nvim-neotest/neotest-go",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
       "nvim-neotest/neotest-python",
-      "rouge8/neotest-rust",
       {
         "folke/neodev.nvim",
         opts = function(_, opts)
@@ -21,11 +21,9 @@ return {
       return {
         -- your neotest config here
         adapters = {
-          require "neotest-go",
-          require "neotest-rust",
           require "neotest-python" {
             dap = { justMyCode = false },
-            args = {"--log-level", "DEBUG", "--cov"},
+            args = {"--log-level", "DEBUG"},
             runner = "pytest",
             -- python = "/Users/tony/getml/chat-project/lalia/.venv/lalia/bin/python",
             -- pytest_discover_instances = true,
@@ -58,6 +56,7 @@ return {
   {
     "catppuccin/nvim",
     optional = true,
+    ---@type CatppuccinOptions
     opts = { integrations = { neotest = true } },
   },
 }
