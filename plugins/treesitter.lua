@@ -28,6 +28,8 @@ return {
         "gitcommit",
         -- docker
         "dockerfile",
+        -- cloud
+        "terraform",
         -- md
         "markdown",
         "markdown_inline",
