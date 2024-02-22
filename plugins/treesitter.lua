@@ -17,8 +17,9 @@ return {
         "cpp",
         "cmake",
         "make",
-        -- bash
+        -- terminal
         "bash",
+        "fish",
         -- git
         "diff",
         "git_config",
